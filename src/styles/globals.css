@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-color: #fdfdfd;
+  color: #212427;
+}
+
+a {
+  text-decoration-line: none !important;
+}
+
+.title {
+  color: #0575e6;
+}
+
+.whatsappButtom{
+  position: fixed;  /* Posiciona el elemento en relación a la ventana del navegador */
+  bottom: 30px;     /* Espacio de 30px desde la parte inferior */
+  right: 30px; 
+  transition: 0.8s all cubic-bezier(0.215, 0.610, 0.355, 1);
+  
+}
+
+.whatsappButtom:hover{
+  scale:1.2 ;
+
+}
+
+.buttonColor {
+  background-color: #0575e6;
+}
+
+.buttonColor:hover {
+  background-color: #021b79;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.container {
+  width: 100vw;
+  padding: 2rem 11rem;
+}
+
+.containerSoloCards {
+  width: 100vw;
+  padding: 2rem 11rem;
+  margin-top: -50px;
+}
+
+.logoSliderContainer {
+  padding: 0 10rem;
+}
+
+.subtile-job {
+  font-weight: 300;
+  color: #212427;
+  font-size: 20px;
+}
+
+#fullscreen {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3744450/man.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+#fullscreen h1 {
+  font-size: 50px;
+  position: absolute;
+  top: 270px;
+  left: 500px;
+  font-weight: 200;
+  color: aquamarine;
+}
+
+#particles-js {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3744450/man.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+#particles-js h1 {
+  font-size: 50px;
+  position: absolute;
+  top: 270px;
+  left: 500px;
+  font-weight: 200;
+  color: aquamarine;
+}
+
+.active {
+  color: #fdfdfd;
+  background: #00c6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0072ff,
+    #00c6ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0072ff,
+    #00c6ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #0072ff;
+  border-radius: 15px;
+
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.active:hover {
+  color: #fdfdfd !important;
+  background-color: #0072ff !important;
+  border-radius: 8px 15px !important;
+}
+
+.burgerMenuSection {
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 90px;
+  padding-bottom:20px;
+  border-radius: 8px;
+  width: 100%;
+  display: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+ 
+}
+
+.burgerMenuSection.open {
+  display: flex;
+}
+
+.menuItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #c9c9c9;
+  border-radius: 0px;
+  height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 1.2em;
+    width: 100%;
+  }
+
+  .container {
+    width: 100vw;
+    padding: 2rem 1rem;
+  }
+
+  .containerPerfil {
+    width: 100%;
+  }
+
+  .perfil {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .textDescription {
+    padding: 0 1.7rem;
+    font-size: 1rem;
+  }
+
+  .subTittle {
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .logoSliderContainer {
+    padding: 0 1.7rem;
+  }
+
+  .tittleCard {
+    font-size: 1.2rem;
+    line-height: normal;
+  }
+
+  .descriptionCard {
+    font-size: 1rem;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  .active{
+    border: none;
+  }
+}
