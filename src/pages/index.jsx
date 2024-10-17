@@ -18,7 +18,7 @@ import Camilo from "../../public/images/imageLanding.png";
 
 const Home = ({ posts, lastProjects }) => {
   const [search, setSearch] = React.useState("");
-  const phoneNumber = '573042093951'; 
+  const phoneNumber = "573042093951";
   const filteredPosts = posts.filter((frontMatter) =>
     frontMatter.title.toLowerCase().includes(search.toLowerCase())
   );
@@ -53,7 +53,7 @@ const Home = ({ posts, lastProjects }) => {
 
       <main>
         <div className="py-8 container mx-auto px-44 ">
-          <div className="mt-1 containerPerfil">
+          {/*  <div className="mt-1 containerPerfil">
             <h1 className="text-3xl font-bold text-center title">
               Anime Nexus
             </h1>
@@ -110,7 +110,7 @@ const Home = ({ posts, lastProjects }) => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
           <h1 className="font-bold text-2xl mb-8 subTittle">
             Ultimos proyectos
           </h1>
@@ -162,7 +162,7 @@ const Home = ({ posts, lastProjects }) => {
             {posts.map((post, index) => {
               return (
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={`/camisetas/${post.slug}`}
                   key={post.slug}
                   className="max-w-sm max-sm:w-full shadow-2xl"
                 >

@@ -1,18 +1,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import Image from "next/image";
-import smallImage from "../../public/images/jsframe.webp";
-import awsLogo from "../../public/images/logos/awsLogo.webp";
-import reactLogo from "../../public/images/logos/reactLogo.webp";
-import nodeLogo from "../../public/images/logos/nodeLogo.webp";
-import expressLogo from "../../public/images/logos/expressLogo.webp";
-import vercelLogo from "../../public/images/logos/vercelLogo.webp";
-import nextJsLogo from "../../public/images/logos/nextJsLogo.webp";
-import reactNativeLogo from "../../public/images/logos/reactNativeLogo.webp";
-import sqlServerLogo from "../../public/images/logos/sqlServeLogo.webp";
-import angulaLogo from "../../public/images/logos/angular.webp";
-import dotNetLogo from "../../public/images/logos/netlogo.webp";
-import azureLogo from "../../public/images/logos/azureLogo.webp";
+
+import logoDC from "../../public/images/logos/logoDC.png";
+import logoMarvel from "../../public/images/logos/marvelLogo.png";
+import logoPS from "../../public/images/logos/logoPS.png";
+import logoNintendo from "../../public/images/logos/logoNintendo.png";
+import logoBandai from "../../public/images/logos/logoBandai.png";
+import logoBandaiNamco from "../../public/images/logos/logoBandiNamco.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -20,7 +15,14 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 export default function LogosSlider() {
-  let images =[awsLogo,reactLogo,expressLogo,nodeLogo,vercelLogo,nextJsLogo,reactNativeLogo,sqlServerLogo,angulaLogo,dotNetLogo,azureLogo]
+  let images = [
+    logoMarvel,
+    logoPS,
+    logoDC,
+    logoNintendo,
+    logoBandai,
+    logoBandaiNamco,
+  ];
   return (
     <div className="logoSliderContainer">
       <div className="sm:hidden">
@@ -29,8 +31,6 @@ export default function LogosSlider() {
           spaceBetween={0}
           slidesPerView={3}
           loop={true}
-          
-       
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           /* breakpoints= {{
@@ -51,14 +51,11 @@ export default function LogosSlider() {
                     {" "}
                     <Image
                       src={img}
-                    
                       height={500}
-
                       //sizes="(max-width: 640px) 700px , (min-width:1000px) 1920px"
                       // srcset="../../public/images/eficience.jpg x1 , ../../banner2.webp x2 , ../../banneBlog.webp x3"
                       className="w-100"
                       placeholder="blur"
-                   
                     />
                   </SwiperSlide>
                 );
@@ -91,9 +88,8 @@ export default function LogosSlider() {
                   <SwiperSlide key={index}>
                     {" "}
                     <Image
-                  //  isDuplicate={true}
+                      //  isDuplicate={true}
                       src={img}
-                 
                       height={500}
                       //sizes="(max-width: 640px) 700px , (min-width:1000px) 1920px"
                       // srcset="../../public/images/eficience.jpg x1 , ../../banner2.webp x2 , ../../banneBlog.webp x3"

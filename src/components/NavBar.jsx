@@ -30,12 +30,12 @@ export default function NavBar() {
             </Link>
             <div className="hidden md:flex md:gap-x-8 px-8">
               <Link
-                href="/portafolio"
+                href="/camisetas"
                 className={`inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100  ${
-                  activeURL === "/portafolio" ? "active" : ""
+                  activeURL === "/camisetas" ? "active" : ""
                 }`}
               >
-                Portafolio
+                Camisetas
               </Link>
               <Link
                 href="/blog"

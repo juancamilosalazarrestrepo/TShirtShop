@@ -50,7 +50,7 @@ const Blog = ({ posts }) => {
         <div className="grid grid-cols-3 gap-4 content-center max-sm:grid-cols-1 max-sm:w-full  max-sm:px-8">
           {filteredPosts.map((post) => (
             <Link
-              href={`/blog/${post.slug}`}
+              href={`/camisetas/${post.slug}`}
               key={post.slug}
               className="max-w-sm"
             >

@@ -42,7 +42,7 @@ const DynamicPost: NextPage<Props> = ({ frontMatter, mdxSource }) => {
         <meta property="og:description" content={frontMatter.subtitle} />
         <meta
           property="og:url"
-          content={`https://www.salazarcode.com/blog/${frontMatter.slug}`}
+          content={`https://www.salazarcode.com/camisetas/${frontMatter.slug}`}
         />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content={frontMatter.thumb} />
