@@ -14,17 +14,15 @@ a {
   color: #0575e6;
 }
 
-.whatsappButtom{
-  position: fixed;  /* Posiciona el elemento en relación a la ventana del navegador */
-  bottom: 30px;     /* Espacio de 30px desde la parte inferior */
-  right: 30px; 
-  transition: 0.8s all cubic-bezier(0.215, 0.610, 0.355, 1);
-  
+.whatsappButtom {
+  position: fixed; /* Posiciona el elemento en relación a la ventana del navegador */
+  bottom: 30px; /* Espacio de 30px desde la parte inferior */
+  right: 30px;
+  transition: 0.8s all cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.whatsappButtom:hover{
-  scale:1.2 ;
-
+.whatsappButtom:hover {
+  scale: 1.2;
 }
 
 .buttonColor {
@@ -122,13 +120,12 @@ a {
   background-color: #fff;
   position: absolute;
   top: 90px;
-  padding-bottom:20px;
+  padding-bottom: 20px;
   border-radius: 8px;
   width: 100%;
   display: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-
- 
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .burgerMenuSection.open {
@@ -142,6 +139,194 @@ a {
   border-bottom: 1px solid #c9c9c9;
   border-radius: 0px;
   height: 50px;
+}
+
+.container-BuyButton-priceText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceText {
+  color: #02a676;
+  font-size: large;
+  font-weight: 400;
+  margin-left: 2px;
+}
+
+.buttons-Container {
+  display: flex;
+  gap: 5px;
+}
+
+.Buttons-Product-Card {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.Button-Add-To-Card {
+  background-color: #fdfdfd;
+  color: #0072ff;
+  border: 1px solid #0072ff;
+}
+
+.Button-Buy {
+  background-color: #0072ff;
+
+  color: #fdfdfd;
+}
+
+.descriptionCard {
+  line-height: normal;
+  margin-bottom: 20px;
+  height: 70px;
+  overflow: auto;
+}
+
+/* Estilizar el scroll */
+.descriptionCard::-webkit-scrollbar {
+  background-color: transparent; /* Ajusta el grosor del scroll */
+}
+
+/* Estilizar el track del scroll (fondo por donde se desplaza el scroll) */
+.descriptionCard::-webkit-scrollbar-track {
+  background: transparent; /* Fondo del track transparente */
+  border-radius: 10px; /* Redondeado del track */
+  width: 10px; /* Ajusta el grosor del scroll */
+}
+
+/* Estilizar el thumb (la barra del scroll que se mueve) */
+.descriptionCard::-webkit-scrollbar-thumb {
+  background-color: #021b79;
+  border-radius: 40px;
+  border: 8px solid transparent;
+  background-clip: padding-box;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+
+/* Opcional: Estilizar el hover sobre el thumb */
+.descriptionCard::-webkit-scrollbar-thumb:hover {
+  background-color: #0072ff; /* Cambia el color al hacer hover */
+}
+
+/* Contenedor básico */
+.shine-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.shine-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Efecto de brillo */
+.shine-container::before {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: rotate(45deg);
+  transition: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hover que activa el destello */
+.shine-container:hover::before {
+  opacity: 1;
+  transform: translateX(200%) translateY(200%) rotate(45deg);
+  transition: transform 0.8s ease-in-out;
+}
+
+.shine-container:hover .shine-image {
+  transform: scale(1.05); /* Aumento leve en el tamaño de la imagen */
+}
+
+/* Contenedor básico */
+.zoom-container {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* Imagen */
+.zoom-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+/* Efecto cíclico de zoom in-out */
+.zoom-container:hover .zoom-image {
+  animation: zoomInOut 1.5s ease-in-out infinite;
+}
+
+/* Animación zoom in-out continua */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* Zoom-in al 120% */
+  }
+  100% {
+    transform: scale(1); /* Regresa al tamaño original */
+  }
+}
+
+
+/* Estilo básico para la imagen */
+.tornasol-container {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.tornasol-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 0.5s ease-in-out;
+  filter: hue-rotate(0deg) saturate(100%) contrast(100%);
+}
+
+/* Hover que aplica el efecto tornasolado */
+.tornasol-container:hover .tornasol-image {
+  animation: tornasolEffect 3s infinite alternate ease-in-out;
+}
+
+/* Definir la animación del efecto tonasolado */
+@keyframes tornasolEffect {
+  0% {
+    filter: hue-rotate(0deg) saturate(120%) contrast(110%);
+  }
+  25% {
+    filter: hue-rotate(90deg) saturate(130%) contrast(120%);
+  }
+  50% {
+    filter: hue-rotate(180deg) saturate(140%) contrast(130%);
+  }
+  75% {
+    filter: hue-rotate(270deg) saturate(150%) contrast(140%);
+  }
+  100% {
+    filter: hue-rotate(360deg) saturate(160%) contrast(150%);
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -190,7 +375,7 @@ a {
     margin-bottom: 20px;
   }
 
-  .active{
+  .active {
     border: none;
   }
 }

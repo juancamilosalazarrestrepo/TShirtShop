@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import Image from "next/image";
-import smallImage from "../../public/images/jsframe.webp";
+import smallImage from "../../public/images/jsframe.png";
 
 // Import Swiper styles
 import "swiper/css";
